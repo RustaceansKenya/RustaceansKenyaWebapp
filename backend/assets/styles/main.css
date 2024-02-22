@@ -1,0 +1,123 @@
+#hero {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100vw !important;
+    height: 100vh !important;
+    text-align: center !important;
+}
+
+@media only screen and (max-width:991px) {
+    #hero {
+        background-image: url('/images/hero-small.svg');
+    }
+}
+
+@media only screen and (min-width:992px) {
+    #hero {
+        background-image: url('/images/hero-large.svg');
+    }
+}
+
+.height-100vh {
+    height: 100vh !important;
+}
+
+.font-brizel-regular {
+    font-family: "brizelregular", "sans-serif";
+}
+
+.font-poppins-regular {
+    font-family: "poppinsregular", "sans-serif";
+}
+
+.font-size-400 {
+    font-size: 400%;
+}
+
+.font-size-150 {
+    font-size: 150%;
+}
+
+.font-size-200 {
+    font-size: 200%;
+}
+
+.font-size-300 {
+    font-size: 300%;
+}
+
+body {
+    font-family: "poppinsregular", "sans-serif";
+    text-decoration: none;
+}
+
+.width-100 {
+    width: 100% !important;
+}
+
+.width-50 {
+    width: 50% !important;
+}
+
+.width-20 {
+    width: 20% !important;
+}
+
+.border-red {
+    border: 1px solid red;
+
+}
+
+.button-link {
+    font-family: "brizelregular", "sans-serif";
+    border: 2px solid #C03A31;
+    border-radius: 30px;
+    padding: 10px 15px;
+
+}
+
+.button-link:hover {
+    font-family: "brizelregular", "sans-serif";
+    border: 2px solid #F39192;
+    border-radius: 30px;
+    padding: 10px 15px;
+    background-color: #F39192;
+    color: #FFFFFF;
+
+}
+
+.button-link a:hover {
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
+.button-link a:visited {
+    text-decoration: none;
+    color: #C03A31;
+    background-color: #F39192;
+}
+
+.color-primary {
+    color: #C03A31;
+}
+
+.bg-color-primary {
+    background-color: #C03A31;
+}
+
+.color-secondary {
+    color: #F39192;
+}
+
+.bg-color-secondary {
+    background-color: #F39192;
+}
+
+.color-tertiary {
+    color: #FFFFFF;
+}
+
+.bg-color-tertiary {
+    background-color: #FFFFFF;
+}
