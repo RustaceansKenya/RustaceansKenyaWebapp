@@ -1,11 +1,14 @@
 [package]
-name = "frontend"
+name = "rustke-frontend"
 version = "0.1.0"
+authors = ["Rustaceans Kenya Community"]
 edition = "2021"
-authors = ["Rustaceans Kenya"]
-description = "The frontend code for the web app"
-license = "MIT OR Apache-2.0"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
+dioxus = { version = "0.6.0", features = ["router"] }
+
+[features]
+default = ["web"]
+web = ["dioxus/web"]
