@@ -75,14 +75,14 @@ body {
 @media (prefers-color-scheme: light) {
     body {
         background-color: white;
-        color: #0f1116;
+        color: #181a1b;
     }
 }
 
 /* Dark mode */
 @media (prefers-color-scheme: dark) {
     body {
-        background-color: #0f1116;
+        background-color: #181a1b;
         color: white;
     }
 }

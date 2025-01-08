@@ -10,7 +10,8 @@ enum Route {
     Blog { id: i32 },
 }
 
-const FAVICON: Asset = asset!("/assets/Favicon.png");
+const FAVICON_LIGHT: Asset = asset!("/assets/Favicon-Light.png");
+const FAVICON_DARK: Asset = asset!("/assets/Favicon-Dark.png");
 const MAIN_CSS: Asset = asset!("/assets/main.css");
 const RUSTACEANS_KENYA_LOGO: Asset = asset!("/assets/RustaceansKenya-Logo.svg");
 const TAILWIND_CSS: Asset = asset!("/assets/tailwind.css");
@@ -22,7 +23,13 @@ fn main() {
 #[component]
 fn App() -> Element {
     rsx! {
-        document::Link { rel: "icon", href: FAVICON }
+        // Default favicon if browser dosen't support setting different favicons for light and dark mode
+        document::Link { rel: "icon", href: FAVICON_LIGHT}
+        // Light mode favicon
+        document::Link { rel: "icon", href: FAVICON_DARK, media: "(prefers-color-scheme: light)"}
+        // Dark mode favicon
+        document::Link { rel: "icon", href: FAVICON_LIGHT, media: "(prefers-color-scheme: dark)"}
+
         document::Title{ "RustaceansKenya" }
         document::Link { rel: "stylesheet", href: MAIN_CSS } document::Link { rel: "stylesheet", href: TAILWIND_CSS }
         Router::<Route> {}
